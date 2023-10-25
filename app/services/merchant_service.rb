@@ -12,4 +12,12 @@ class MerchantService
   def merchants
     get_url("merchants")
   end
+
+  def merchant(id)
+    get_url("merchants/#{id}")
+  end
+
+  def items(id)
+    get_url("merchants/#{id}/items")
+  end
 end
