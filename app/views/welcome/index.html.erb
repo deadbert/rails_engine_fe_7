@@ -1,8 +1,10 @@
+<div style="width: 20%; margin: auto">
 <%= form_with url: "/", method: :get, data: {turbo: false} do |f| %>
   <%= f.label :keyword, "Search" %>
   <%= f.text_field :keyword %>
   <%= f.submit "Submit" %>
 <% end %>
+</div>
 <% @merchants.each do |merchant| %>
   <h3>Name: <%= link_to "#{merchant.name}", "/merchants/#{merchant.id}" %></h3>
 <% end %>
