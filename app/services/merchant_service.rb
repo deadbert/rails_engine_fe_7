@@ -20,4 +20,8 @@ class MerchantService
   def items(id)
     get_url("merchants/#{id}/items")
   end
+
+  def merchants_by_name(keyword)
+    get_url("merchants/find_all?name=#{keyword}")
+  end
 end

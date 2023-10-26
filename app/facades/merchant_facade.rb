@@ -18,4 +18,11 @@ class MerchantFacade
       Item.new(item)
     end
   end
+
+  def merchants_by_name(keyword)
+    merchants = MerchantService.new.merchants_by_name(keyword)[:data]
+    merchants.map do |merchant|
+      Merchant.new(merchant)
+    end
+  end
 end
